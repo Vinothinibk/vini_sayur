@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>sayur</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+   <h1>calculator</h1>
+   <label>number1</label>
+   <textarea id="textnumber1"></textarea><br>
+   <label>number2</label> 
+   <textarea id="textnumber2"></textarea><br><br>
+   <button id="buttonadd">Add</button>
+   <button id="buttonsub">Sub</button><br><br>
+   <!-- <label>Result</label> -->
+   <label id="result"></label>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#buttonadd").click(function(){
+          var number1=$("#textnumber1").val();
+          var number2=$("#textnumber2").val();
+          var result=parseInt(number1)+parseInt(number2)
+          $("#result").text("sum is" + result)
+          });
+        $("#buttonsub").click(function(){
+          var number1=$("#textnumber1").val();
+          var number2=$("#textnumber2").val();
+          var result=parseInt(number1)-parseInt(number2)
+          $("#result").text("Diff is" + result)
+          });
+     });
+     </script>
+</html>
